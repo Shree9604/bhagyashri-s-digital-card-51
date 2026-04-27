@@ -32,12 +32,12 @@ function Navbar() {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`relative rounded-full px-3 py-1.5 text-sm font-semibold transition-colors md:px-4 md:py-2 ${
+                className="relative rounded-full px-3 py-1.5 text-sm font-semibold transition-colors md:px-4 md:py-2"
+                style={
                   isActive
-                    ? "bg-ink text-[var(--cream)]"
-                    : "text-ink hover:bg-ink/10"
-                }`}
-                style={isActive ? { backgroundColor: "var(--ink)", color: "var(--cream)" } : undefined}
+                    ? { backgroundColor: "var(--ink)", color: "var(--cream)" }
+                    : { color: "var(--ink)" }
+                }
               >
                 {item.label}
               </Link>
